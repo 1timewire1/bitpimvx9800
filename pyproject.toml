@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bitpim-vx9800-backup"
+version = "0.1.0"
+description = "LG VX9800 backup, diagnostics, and experimental upload over Bluetooth serial"
+readme = "vx9800_backup/README.md"
+requires-python = ">=3.11"
+dependencies = ["pyserial>=3.5"]
+
+[project.scripts]
+vx9800-backup = "vx9800_backup.cli:main"
+
+[tool.setuptools]
+packages = ["vx9800_backup"]
